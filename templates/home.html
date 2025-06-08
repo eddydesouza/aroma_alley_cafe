@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="hero">
+        <h1>Welcome to Aroma Alley Cafe</h1>
+        <p>Order your favorite coffee and pastries online!</p>
+        <button onclick="window.location.href='{{ url_for('menu') }}'">Order Now</button>
+    </div>
+    <div class="about">
+        <h2>About Us</h2>
+        <p>Aroma Alley Cafe serves the best coffee in town. Open daily from 7 AM to 7 PM.</p>
+    </div>
+{% endblock %}

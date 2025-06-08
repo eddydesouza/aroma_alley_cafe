@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Your Cart</h2>
+    <table class="cart-table">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <p id="cart-total">Total: $0.00</p>
+    <button onclick="window.location.href='{{ url_for('checkout') }}'">Proceed to Checkout</button>
+    <script>
+        updateCart();
+    </script>
+{% endblock %}

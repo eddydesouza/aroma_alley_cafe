@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Checkout</h2>
+    <div class="order-summary">
+        <h3>Order Summary</h3>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <p id="cart-total">Total: $0.00</p>
+    </div>
+    <div class="form-container">
+        <h3>User Details</h3>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="phone" placeholder="Phone (optional)">
+        <button onclick="submitCheckout()">Pay Now</button>
+    </div>
+    <script>
+        updateCUSTOMERCart();
+    </script>
+{% endblock %}
